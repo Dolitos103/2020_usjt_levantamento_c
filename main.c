@@ -51,10 +51,11 @@ void exibir(lista * l){
 
 int main(void) {
   srand(time(NULL));
-  for (int i = 0; i < 10; i++){
+  lista * uma_lista = obter_lista();
+  for (int i = 0; i < 100; i++){
     int dado = rand() % 20 + 1;
-    printf("%d ", dado);
+    inserir(uma_lista, dado);
+    exibir(uma_lista);
   }
-  printf("\n");
   return 0;
 }
